@@ -7,8 +7,8 @@ import { FaSearch } from 'react-icons/fa';
 
 const DisplayData = () => {
     const [displayData, setDisplayData] = useState([]);
-    const [loading, setLoading] = useState(true); // Initial loading state
-    const [searchTerm, setSearchTerm] = useState(''); // State for the search term
+    const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,7 +18,7 @@ const DisplayData = () => {
             } catch (error) {
                 console.error('Error fetching data:', error);
             } finally {
-                setLoading(false); // Set loading to false when data is fetched or on error
+                setLoading(false);
             }
         };
 
@@ -45,7 +45,6 @@ const DisplayData = () => {
         );
     }
 
-    // Render the content when loading is false
     return (
         <div>
             <h1 className="text-2xl font-bold mb-4">Display Data</h1>
